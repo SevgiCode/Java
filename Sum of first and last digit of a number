@@ -1,0 +1,49 @@
+import java.util.Scanner;
+
+public class CheckFirstDigit {
+    public static void main(String[] args) {
+      
+        Scanner scanner = new Scanner(System.in);
+
+       
+        System.out.print("Enter a number: ");
+        
+   
+        int number = scanner.nextInt();
+if(number >10){
+  
+        int result = getLastDigit(number) + getFirstDigit(number);
+        System.out.println("The result is: " + result);
+    
+}else{
+            System.out.println("Invalid number! The number must be bigger than 10!");
+        }
+       
+
+        
+
+        
+        scanner.close();
+    }
+
+    private static int getLastDigit(int num) {
+     
+        String numStr = Integer.toString(num);
+
+        // Extract the first character and convert it back to an integer
+        return num % 10;
+    }
+
+    private static int getFirstDigit(int num) {
+        
+        String numStr = Integer.toString(num);
+
+        
+        return Character.getNumericValue(numStr.charAt(0));
+    }
+
+    
+    private static boolean isEven(int num) {
+        return num % 2 == 0;
+    }
+}
