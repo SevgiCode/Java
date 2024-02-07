@@ -1,0 +1,19 @@
+import java.util.Scanner;
+class HelloWorld {
+    public static void main(String[] args) {
+        
+    System.out.println("Enter a number: ");
+    Scanner sc = new Scanner(System.in);
+    int number = sc.nextInt();
+   int sod= sumOfDigits(number);
+        System.out.println("The sum is: " + sod);
+    }
+    public static int sumOfDigits(int num){
+        int sum = 0;
+        while(num > 0){
+           	sum += num % 10;
+            num /=10;
+        }
+        return sum;
+    }
+}
