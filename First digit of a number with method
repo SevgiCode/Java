@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        int number,fd;
+        Scanner sc= new Scanner(System.in);
+       System.out.println("Enter a number: ");
+       number = sc.nextInt();
+      
+      fd = firstDigit(number);
+       System.out.println( "the first digit is:  " + fd);
+    }
+    
+    
+    public static int firstDigit(int num){
+        int firstDigit;
+       while(num <= 10){
+           num /= num;
+       }
+       firstDigit = num / 10;
+       return firstDigit;
+    }
+}
